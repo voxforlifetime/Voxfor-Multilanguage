@@ -1,0 +1,275 @@
+/**
+ * Voxfor Multilanguage - Visual Editor Styles
+ */
+
+/* Edit mode indicators */
+.voxfor-ml-edit-mode {
+    padding-top: 50px; /* Space for toolbar */
+}
+
+/* Toolbar */
+.voxfor-ml-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: #23282d;
+    color: #fff;
+    z-index: 999999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.voxfor-ml-toolbar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.voxfor-ml-toolbar-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.voxfor-ml-toolbar .button {
+    margin-left: 10px;
+}
+
+/* Translatable elements */
+.voxfor-ml-translatable {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.voxfor-ml-translatable:hover {
+    background-color: rgba(0, 124, 186, 0.1);
+    outline: 2px dashed #007cba;
+    outline-offset: 2px;
+}
+
+/* Status indicators */
+.voxfor-ml-translatable::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.voxfor-ml-status-untranslated::before {
+    background-color: #dc3545;
+}
+
+.voxfor-ml-status-draft::before {
+    background-color: #ffc107;
+}
+
+.voxfor-ml-status-reviewed::before {
+    background-color: #28a745;
+}
+
+.voxfor-ml-status-locked::before {
+    background-color: #6c757d;
+}
+
+.voxfor-ml-locked {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+/* Hide highlights */
+.voxfor-ml-highlights-hidden .voxfor-ml-translatable {
+    background-color: transparent !important;
+    outline: none !important;
+}
+
+.voxfor-ml-highlights-hidden .voxfor-ml-translatable::before {
+    display: none;
+}
+
+/* Editor popup */
+.voxfor-ml-editor-popup {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 999998;
+    min-width: 400px;
+    max-width: 600px;
+}
+
+.voxfor-ml-editor-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.voxfor-ml-editor-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.voxfor-ml-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.voxfor-ml-close:hover {
+    color: #000;
+}
+
+.voxfor-ml-editor-body {
+    padding: 20px;
+}
+
+.voxfor-ml-field {
+    margin-bottom: 15px;
+}
+
+.voxfor-ml-field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #23282d;
+}
+
+.voxfor-ml-original {
+    padding: 10px;
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    color: #555;
+}
+
+.voxfor-ml-translation {
+    width: 100%;
+    min-height: 80px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.voxfor-ml-translation:focus {
+    border-color: #007cba;
+    outline: none;
+    box-shadow: 0 0 0 1px #007cba;
+}
+
+.voxfor-ml-translation:disabled {
+    background: #f7f7f7;
+    cursor: not-allowed;
+}
+
+.voxfor-ml-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.voxfor-ml-meta label {
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+
+.voxfor-ml-meta select {
+    flex: 1;
+}
+
+.voxfor-ml-lock-btn {
+    padding: 5px 10px;
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.voxfor-ml-lock-btn:hover {
+    background: #e7e7e7;
+}
+
+.voxfor-ml-editor-footer {
+    padding: 15px 20px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* WordPress admin bar compatibility */
+.admin-bar .voxfor-ml-toolbar {
+    top: 32px;
+}
+
+.admin-bar.voxfor-ml-edit-mode {
+    padding-top: 82px;
+}
+
+@media screen and (max-width: 782px) {
+    .admin-bar .voxfor-ml-toolbar {
+        top: 46px;
+    }
+    
+    .admin-bar.voxfor-ml-edit-mode {
+        padding-top: 96px;
+    }
+    
+    .voxfor-ml-editor-popup {
+        min-width: 300px;
+        max-width: calc(100vw - 20px);
+    }
+}
+
+/* RTL support */
+.rtl .voxfor-ml-translatable::before {
+    right: auto;
+    left: -5px;
+}
+
+.rtl .voxfor-ml-toolbar-inner {
+    flex-direction: row-reverse;
+}
+
+.rtl .voxfor-ml-toolbar .button {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+/* Animation */
+@keyframes voxfor-ml-pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.voxfor-ml-translatable:hover::before {
+    animation: voxfor-ml-pulse 1s ease-in-out infinite;
+}

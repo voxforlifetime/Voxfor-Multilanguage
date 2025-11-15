@@ -1,0 +1,305 @@
+/**
+ * Voxfor Multilanguage - Translation Status Styles
+ */
+
+/* Main container */
+.voxfor-ml-translation-status-box {
+    margin: -6px -12px -12px;
+}
+
+/* Header */
+.voxfor-ml-status-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    background: #f7f7f7;
+}
+
+.voxfor-ml-status-header h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#voxfor-ml-refresh-status {
+    padding: 4px 8px;
+    height: auto;
+    line-height: 1.4;
+}
+
+#voxfor-ml-refresh-status .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+
+/* Language grid */
+.voxfor-ml-language-grid {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Language item */
+.voxfor-ml-language-item {
+    border-bottom: 1px solid #eee;
+    padding: 12px;
+    transition: background-color 0.2s;
+}
+
+.voxfor-ml-language-item:hover {
+    background-color: #f9f9f9;
+}
+
+.voxfor-ml-language-item.current {
+    background-color: #f0f8ff;
+    border-left: 3px solid #007cba;
+    padding-left: 9px;
+}
+
+/* Language header */
+.voxfor-ml-language-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    gap: 8px;
+}
+
+.voxfor-ml-flag {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.voxfor-ml-language-name {
+    font-weight: 600;
+    font-size: 13px;
+    flex: 1;
+}
+
+.voxfor-ml-current-badge {
+    background: #007cba;
+    color: white;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: normal;
+}
+
+/* Translation info */
+.voxfor-ml-translation-info {
+    margin-bottom: 8px;
+}
+
+.voxfor-ml-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.voxfor-ml-status .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.voxfor-ml-status-source {
+    color: #666;
+}
+
+.voxfor-ml-status-source .dashicons {
+    color: #666;
+}
+
+.voxfor-ml-status-translated {
+    color: #46b450;
+}
+
+.voxfor-ml-status-translated .dashicons {
+    color: #46b450;
+}
+
+.voxfor-ml-status-progress {
+    color: #f56e28;
+}
+
+.voxfor-ml-status-progress .dashicons {
+    color: #f56e28;
+}
+
+.voxfor-ml-status-missing {
+    color: #dc3232;
+}
+
+.voxfor-ml-status-missing .dashicons {
+    color: #dc3232;
+}
+
+/* Title */
+.voxfor-ml-title {
+    font-size: 12px;
+    color: #333;
+    margin: 4px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Meta info */
+.voxfor-ml-meta {
+    margin-top: 4px;
+}
+
+.voxfor-ml-meta small {
+    color: #666;
+    font-size: 11px;
+}
+
+/* Progress bar */
+.voxfor-ml-progress {
+    width: 100%;
+    height: 4px;
+    background: #e5e5e5;
+    border-radius: 2px;
+    margin: 4px 0;
+    overflow: hidden;
+}
+
+.voxfor-ml-progress-bar {
+    height: 100%;
+    background: #007cba;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+/* Actions */
+.voxfor-ml-actions {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.voxfor-ml-actions .button {
+    padding: 4px 8px;
+    height: auto;
+    line-height: 1.4;
+    font-size: 12px;
+}
+
+.voxfor-ml-actions .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+/* Summary */
+.voxfor-ml-status-summary {
+    padding: 12px;
+    background: #f7f7f7;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.voxfor-ml-status-summary p {
+    margin: 0 0 8px;
+    font-size: 13px;
+    color: #666;
+}
+
+.voxfor-ml-translate-all {
+    width: 100%;
+}
+
+/* Spinning animation */
+@keyframes voxfor-ml-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.dashicons.spin {
+    animation: voxfor-ml-spin 2s linear infinite;
+}
+
+/* Notices */
+.voxfor-ml-notice {
+    margin: 10px 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 782px) {
+    .voxfor-ml-language-grid {
+        max-height: 300px;
+    }
+    
+    .voxfor-ml-language-item {
+        padding: 10px;
+    }
+    
+    .voxfor-ml-actions {
+        margin-top: 8px;
+    }
+    
+    .voxfor-ml-actions .button {
+        flex: 1;
+        min-width: 0;
+    }
+}
+
+/* RTL Support */
+.rtl .voxfor-ml-language-item.current {
+    border-left: none;
+    border-right: 3px solid #007cba;
+    padding-left: 12px;
+    padding-right: 9px;
+}
+
+.rtl .voxfor-ml-language-header {
+    flex-direction: row-reverse;
+}
+
+.rtl .voxfor-ml-status {
+    flex-direction: row-reverse;
+}
+
+.rtl .voxfor-ml-actions {
+    flex-direction: row-reverse;
+}
+
+/* Dark mode compatibility */
+@media (prefers-color-scheme: dark) {
+    .voxfor-ml-translation-status-box {
+        background: #1e1e1e;
+        color: #ccc;
+    }
+    
+    .voxfor-ml-status-header,
+    .voxfor-ml-status-summary {
+        background: #2c2c2c;
+        border-color: #444;
+    }
+    
+    .voxfor-ml-language-item {
+        border-color: #444;
+    }
+    
+    .voxfor-ml-language-item:hover {
+        background-color: #2c2c2c;
+    }
+    
+    .voxfor-ml-language-item.current {
+        background-color: #1a3a52;
+    }
+    
+    .voxfor-ml-title {
+        color: #ccc;
+    }
+}

@@ -1,0 +1,1000 @@
+/**
+ * Voxfor Multilanguage - Frontend Styles
+ * Focus on accessibility and SEO-friendly styling
+ */
+
+/* Base Styles */
+.voxfor-ml-switcher {
+    position: relative;
+    display: inline-block;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.voxfor-ml-switcher * {
+    box-sizing: border-box;
+}
+
+.voxfor-ml-flag {
+    font-size: 1.2em;
+    margin-right: 0.5em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.voxfor-ml-lang-name {
+    vertical-align: middle;
+}
+
+/* Dropdown Switcher */
+.voxfor-ml-switcher-dropdown {
+    position: relative;
+}
+
+.voxfor-ml-switcher-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.5em 1em;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.5;
+    transition: all 0.2s ease;
+}
+
+.voxfor-ml-switcher-toggle:hover,
+.voxfor-ml-switcher-toggle:focus {
+    border-color: #999;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.voxfor-ml-switcher-toggle:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 2px;
+}
+
+.voxfor-ml-arrow {
+    font-size: 0.8em;
+    margin-left: auto;
+    transition: transform 0.2s ease;
+}
+
+.voxfor-ml-switcher-toggle[aria-expanded="true"] .voxfor-ml-arrow {
+    transform: rotate(180deg);
+}
+
+.voxfor-ml-switcher-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.2s ease;
+    z-index: 1000;
+    min-width: 200px;
+}
+
+.voxfor-ml-switcher-toggle[aria-expanded="true"] + .voxfor-ml-switcher-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(4px);
+}
+
+.voxfor-ml-lang-option {
+    display: flex;
+    align-items: center;
+    padding: 0.75em 1em;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.voxfor-ml-lang-option:hover,
+.voxfor-ml-lang-option:focus {
+    background-color: #f5f5f5;
+}
+
+.voxfor-ml-lang-option:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: -2px;
+}
+
+.voxfor-ml-lang-option.current {
+    background-color: #f0f0f0;
+    font-weight: 600;
+}
+
+.voxfor-ml-checkmark {
+    margin-left: auto;
+    color: #46b450;
+}
+
+/* Inline Switcher */
+.voxfor-ml-switcher-inline .voxfor-ml-lang-list {
+    display: flex;
+    gap: 1em;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.voxfor-ml-lang-item {
+    margin: 0;
+}
+
+.voxfor-ml-lang-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5em 1em;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.voxfor-ml-lang-link:hover,
+.voxfor-ml-lang-link:focus {
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}
+
+.voxfor-ml-lang-link:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 2px;
+}
+
+.voxfor-ml-lang-link.current {
+    background-color: #0073aa;
+    color: #fff;
+    font-weight: 600;
+}
+
+.voxfor-ml-lang-link.current .voxfor-ml-flag {
+    filter: brightness(1.2);
+}
+
+/* Flags Only Switcher */
+.voxfor-ml-switcher-flags .voxfor-ml-flag-list {
+    display: flex;
+    gap: 0.5em;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.voxfor-ml-flag-item {
+    margin: 0;
+}
+
+.voxfor-ml-flag-link {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5em;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.voxfor-ml-flag-link:hover,
+.voxfor-ml-flag-link:focus {
+    background-color: #f5f5f5;
+    transform: translateY(-2px);
+}
+
+.voxfor-ml-flag-link:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 2px;
+}
+
+.voxfor-ml-flag-link.current::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background-color: #0073aa;
+    border-radius: 50%;
+}
+
+.voxfor-ml-flag-large {
+    font-size: 2em;
+}
+
+.voxfor-ml-lang-code {
+    font-size: 0.75em;
+    margin-top: 0.25em;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Compact Switcher - Enhanced */
+.voxfor-ml-switcher-compact {
+    position: relative;
+}
+
+.voxfor-ml-compact-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    min-width: 100px;
+}
+
+.voxfor-ml-compact-toggle:hover,
+.voxfor-ml-compact-toggle:focus {
+    border-color: #999;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.voxfor-ml-compact-toggle:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 2px;
+}
+
+.voxfor-ml-globe-icon {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.voxfor-ml-current-lang {
+    font-weight: 600;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Show flag in current language display */
+.voxfor-ml-current-lang .voxfor-ml-flag {
+    font-size: 1.2em;
+    margin-right: 4px;
+}
+
+.voxfor-ml-current-lang .voxfor-ml-lang-name {
+    font-size: 14px;
+}
+
+.voxfor-ml-compact-menu {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    margin-bottom: 8px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 10000;
+    width: 220px;
+    max-height: 300px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f5f5f5;
+}
+
+/* Custom scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+.voxfor-ml-compact-menu::-webkit-scrollbar {
+    width: 6px;
+}
+
+.voxfor-ml-compact-menu::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+
+.voxfor-ml-compact-menu::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.voxfor-ml-compact-menu::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+.voxfor-ml-compact-toggle[aria-expanded="true"] + .voxfor-ml-compact-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.voxfor-ml-compact-grid {
+    display: block;
+    padding: 8px 0;
+    width: 100%;
+}
+
+.voxfor-ml-compact-option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.2s ease;
+    gap: 10px;
+}
+
+.voxfor-ml-compact-option:last-child {
+    border-bottom: none;
+}
+
+.voxfor-ml-compact-option:hover,
+.voxfor-ml-compact-option:focus {
+    background-color: #f8f9fa;
+}
+
+.voxfor-ml-compact-option:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: -2px;
+}
+
+.voxfor-ml-compact-option.current {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    font-weight: 600;
+}
+
+.voxfor-ml-compact-option .voxfor-ml-flag {
+    font-size: 1.3em;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.voxfor-ml-compact-option .voxfor-ml-lang-name {
+    font-size: 14px;
+    font-weight: 500;
+    flex: 1;
+}
+
+.voxfor-ml-compact-option .voxfor-ml-checkmark {
+    color: #46b450;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+/* Floating Switcher - Enhanced */
+.voxfor-ml-floating-switcher {
+    position: fixed;
+    z-index: 9999;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.voxfor-ml-position-bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+
+.voxfor-ml-position-bottom-left {
+    bottom: 20px;
+    left: 20px;
+}
+
+.voxfor-ml-position-top-right {
+    top: 20px;
+    right: 20px;
+}
+
+.voxfor-ml-position-top-left {
+    top: 20px;
+    left: 20px;
+}
+
+.voxfor-ml-floating .voxfor-ml-compact-toggle {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    min-width: 120px;
+    padding: 12px 16px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.voxfor-ml-floating .voxfor-ml-compact-toggle:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+}
+
+/* Enhanced Flag Display */
+.voxfor-ml-floating .voxfor-ml-flag {
+    font-size: 1.4em;
+    margin-right: 6px;
+    display: inline-block;
+}
+
+.voxfor-ml-floating .voxfor-ml-current-lang {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    margin-right: 4px;
+}
+
+.voxfor-ml-floating .voxfor-ml-globe-icon {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.voxfor-ml-floating .voxfor-ml-arrow {
+    font-size: 0.8em;
+    color: #666;
+    margin-left: auto;
+}
+
+/* Enhanced Floating Menu */
+.voxfor-ml-floating .voxfor-ml-compact-menu {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    margin-bottom: 8px;
+    max-width: 220px;
+    min-width: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 10000;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f5f5f5;
+}
+
+/* Custom scrollbar for Webkit browsers (Chrome, Safari, Edge) - Floating Menu */
+.voxfor-ml-floating .voxfor-ml-compact-menu::-webkit-scrollbar {
+    width: 6px;
+}
+
+.voxfor-ml-floating .voxfor-ml-compact-menu::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+
+.voxfor-ml-floating .voxfor-ml-compact-menu::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.voxfor-ml-floating .voxfor-ml-compact-menu::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+.voxfor-ml-floating .voxfor-ml-compact-toggle[aria-expanded="true"] + .voxfor-ml-compact-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.voxfor-ml-floating .voxfor-ml-compact-option {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.2s ease;
+    gap: 10px;
+}
+
+.voxfor-ml-floating .voxfor-ml-compact-option:last-child {
+    border-bottom: none;
+}
+
+.voxfor-ml-floating .voxfor-ml-compact-option:hover {
+    background-color: #f8f9fa;
+}
+
+.voxfor-ml-floating .voxfor-ml-compact-option.current {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    font-weight: 600;
+}
+
+.voxfor-ml-floating .voxfor-ml-compact-option .voxfor-ml-flag {
+    font-size: 1.3em;
+    margin-right: 8px;
+    margin-left: 0;
+}
+
+.voxfor-ml-floating .voxfor-ml-compact-option .voxfor-ml-lang-name {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Ensure menu stays within viewport for bottom-right position */
+.voxfor-ml-position-bottom-right .voxfor-ml-compact-menu {
+    right: 0;
+    left: auto;
+}
+
+/* Ensure menu stays within viewport for bottom-left position */
+.voxfor-ml-position-bottom-left .voxfor-ml-compact-menu {
+    left: 0;
+    right: auto;
+}
+
+/* RTL Support - Complete Right-to-Left Language Support */
+
+/* Global RTL Direction - High Specificity Override - Frontend Only */
+body.voxfor-ml-rtl:not(.wp-admin),
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+body.voxfor-ml-rtl:not(.wp-admin) *,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) * {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+/* Exclude admin area from RTL styling */
+body.wp-admin.voxfor-ml-rtl,
+body.wp-admin.voxfor-ml-rtl * {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+/* Override WordPress default LTR for RTL languages - Frontend Only */
+body.voxfor-ml-rtl:not(.wp-admin) p,
+body.voxfor-ml-rtl:not(.wp-admin) div,
+body.voxfor-ml-rtl:not(.wp-admin) span,
+body.voxfor-ml-rtl:not(.wp-admin) h1,
+body.voxfor-ml-rtl:not(.wp-admin) h2,
+body.voxfor-ml-rtl:not(.wp-admin) h3,
+body.voxfor-ml-rtl:not(.wp-admin) h4,
+body.voxfor-ml-rtl:not(.wp-admin) h5,
+body.voxfor-ml-rtl:not(.wp-admin) h6,
+body.voxfor-ml-rtl:not(.wp-admin) li,
+body.voxfor-ml-rtl:not(.wp-admin) td,
+body.voxfor-ml-rtl:not(.wp-admin) th,
+body.voxfor-ml-rtl:not(.wp-admin) blockquote,
+body.voxfor-ml-rtl:not(.wp-admin) article,
+body.voxfor-ml-rtl:not(.wp-admin) section,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) p,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) div,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) span,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) h1,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) h2,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) h3,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) h4,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) h5,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) h6,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) li,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) td,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) th,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) blockquote,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) article,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) section {
+    direction: rtl !important;
+    text-align: right !important;
+    unicode-bidi: embed !important;
+}
+
+/* RTL Text Content - Frontend Only */
+body.voxfor-ml-rtl:not(.wp-admin) .entry-content,
+body.voxfor-ml-rtl:not(.wp-admin) .post-content,
+body.voxfor-ml-rtl:not(.wp-admin) .page-content,
+body.voxfor-ml-rtl:not(.wp-admin) .content,
+body.voxfor-ml-rtl:not(.wp-admin) main,
+body.voxfor-ml-rtl:not(.wp-admin) article,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) .entry-content,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) .post-content,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) .page-content,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) .content,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) main,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) article {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+/* RTL Headings - Frontend Only */
+body.voxfor-ml-rtl:not(.wp-admin) .entry-title,
+body.voxfor-ml-rtl:not(.wp-admin) .post-title,
+body.voxfor-ml-rtl:not(.wp-admin) .page-title,
+body.voxfor-ml-rtl:not(.wp-admin) h1,
+body.voxfor-ml-rtl:not(.wp-admin) h2,
+body.voxfor-ml-rtl:not(.wp-admin) h3,
+body.voxfor-ml-rtl:not(.wp-admin) h4,
+body.voxfor-ml-rtl:not(.wp-admin) h5,
+body.voxfor-ml-rtl:not(.wp-admin) h6,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) .entry-title,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) .post-title,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) .page-title,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) h1,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) h2,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) h3,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) h4,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) h5,
+html[dir="rtl"] body.voxfor-ml-rtl:not(.wp-admin) h6 {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+/* RTL Lists */
+.voxfor-ml-rtl ul,
+.voxfor-ml-rtl ol {
+    direction: rtl !important;
+    text-align: right !important;
+    padding-right: 2em;
+    padding-left: 0;
+}
+
+.voxfor-ml-rtl li {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+/* RTL Navigation */
+.voxfor-ml-rtl nav,
+.voxfor-ml-rtl .navigation,
+.voxfor-ml-rtl .nav-menu {
+    direction: rtl !important;
+}
+
+.voxfor-ml-rtl .nav-menu li {
+    float: right;
+}
+
+/* RTL Forms */
+.voxfor-ml-rtl input[type="text"],
+.voxfor-ml-rtl input[type="email"],
+.voxfor-ml-rtl input[type="password"],
+.voxfor-ml-rtl textarea,
+.voxfor-ml-rtl select {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+/* RTL Tables */
+.voxfor-ml-rtl table {
+    direction: rtl !important;
+}
+
+.voxfor-ml-rtl th,
+.voxfor-ml-rtl td {
+    text-align: right !important;
+}
+
+/* Language Switcher RTL Adjustments */
+.voxfor-ml-rtl .voxfor-ml-flag {
+    margin-right: 0;
+    margin-left: 0.5em;
+}
+
+.voxfor-ml-rtl .voxfor-ml-arrow {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.voxfor-ml-rtl .voxfor-ml-checkmark {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.voxfor-ml-rtl .voxfor-ml-compact-menu {
+    right: auto;
+    left: -80;
+}
+
+/* RTL WordPress Theme Compatibility */
+.voxfor-ml-rtl .site-header,
+.voxfor-ml-rtl .site-content,
+.voxfor-ml-rtl .site-footer {
+    direction: rtl !important;
+}
+
+.voxfor-ml-rtl .entry-meta,
+.voxfor-ml-rtl .post-meta {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+/* RTL Block Editor Support */
+.voxfor-ml-rtl .wp-block {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.voxfor-ml-rtl .wp-block-paragraph,
+.voxfor-ml-rtl .wp-block-heading,
+.voxfor-ml-rtl .wp-block-list {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+/* RTL Comments */
+.voxfor-ml-rtl .comments-area,
+.voxfor-ml-rtl .comment-content,
+.voxfor-ml-rtl .comment-meta {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+/* RTL Sidebar */
+.voxfor-ml-rtl .sidebar,
+.voxfor-ml-rtl .widget {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+/* RTL Footer */
+.voxfor-ml-rtl .site-info,
+.voxfor-ml-rtl .footer-content {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .voxfor-ml-switcher-toggle,
+    .voxfor-ml-switcher-dropdown-menu,
+    .voxfor-ml-compact-toggle,
+    .voxfor-ml-compact-menu {
+        background: #1e1e1e;
+        border-color: #444;
+        color: #fff;
+        scrollbar-color: #555 #2a2a2a;
+    }
+    
+    .voxfor-ml-lang-option,
+    .voxfor-ml-lang-link,
+    .voxfor-ml-compact-option {
+        color: #fff;
+    }
+    
+    .voxfor-ml-lang-option.current,
+    .voxfor-ml-compact-option.current {
+        background-color: #2a2a2a;
+    }
+    
+    /* Dark mode scrollbar for Webkit browsers */
+    .voxfor-ml-compact-menu::-webkit-scrollbar-track,
+    .voxfor-ml-floating .voxfor-ml-compact-menu::-webkit-scrollbar-track {
+        background: #2a2a2a;
+    }
+    
+    .voxfor-ml-compact-menu::-webkit-scrollbar-thumb,
+    .voxfor-ml-floating .voxfor-ml-compact-menu::-webkit-scrollbar-thumb {
+        background: #555;
+    }
+    
+    .voxfor-ml-compact-menu::-webkit-scrollbar-thumb:hover,
+    .voxfor-ml-floating .voxfor-ml-compact-menu::-webkit-scrollbar-thumb:hover {
+        background: #777;
+    }
+    
+    .voxfor-ml-lang-code {
+        color: #aaa;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .voxfor-ml-switcher-dropdown-menu {
+        min-width: 160px;
+    }
+    
+    .voxfor-ml-compact-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .voxfor-ml-floating-switcher {
+        bottom: 10px !important;
+        right: 10px !important;
+        left: auto !important;
+        top: auto !important;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .voxfor-ml-switcher,
+    .voxfor-ml-floating-switcher {
+        display: none !important;
+    }
+}
+
+/* Accessibility - High Contrast Mode */
+@media (prefers-contrast: high) {
+    .voxfor-ml-switcher-toggle:focus,
+    .voxfor-ml-lang-option:focus,
+    .voxfor-ml-lang-link:focus,
+    .voxfor-ml-flag-link:focus,
+    .voxfor-ml-compact-toggle:focus,
+    .voxfor-ml-compact-option:focus {
+        outline-width: 3px;
+    }
+}
+
+/* Widget Styles */
+.voxfor-ml-language-switcher {
+    margin: 1em 0;
+}
+
+.voxfor-ml-language-switcher .voxfor-ml-language-select {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 14px;
+}
+
+.voxfor-ml-language-switcher .voxfor-ml-language-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.voxfor-ml-language-switcher .voxfor-ml-language-item {
+    margin: 0.5em 0;
+}
+
+.voxfor-ml-language-switcher .voxfor-ml-language-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5em;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.voxfor-ml-language-switcher .voxfor-ml-language-link:hover {
+    background-color: #f5f5f5;
+}
+
+.voxfor-ml-language-switcher .voxfor-ml-current-language {
+    font-weight: bold;
+    color: #0073aa;
+}
+
+.voxfor-ml-language-switcher .voxfor-ml-flags-container {
+    display: flex;
+    gap: 0.5em;
+    flex-wrap: wrap;
+}
+
+.voxfor-ml-language-switcher .voxfor-ml-flag {
+    display: inline-block;
+    padding: 0.25em;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+}
+
+.voxfor-ml-language-switcher .voxfor-ml-flag:hover {
+    transform: scale(1.1);
+}
+
+.voxfor-ml-language-switcher .voxfor-ml-flag.current {
+    background-color: #e6f3ff;
+}
+
+.voxfor-ml-language-switcher .voxfor-ml-compact-switcher {
+    position: relative;
+}
+
+.voxfor-ml-language-switcher .voxfor-ml-current-lang {
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+.voxfor-ml-language-switcher .voxfor-ml-lang-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: none;
+    z-index: 1000;
+}
+
+.voxfor-ml-language-switcher .voxfor-ml-lang-dropdown.show {
+    display: block;
+}
+
+.voxfor-ml-language-switcher .voxfor-ml-lang-option {
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #eee;
+}
+
+.voxfor-ml-language-switcher .voxfor-ml-lang-option:hover {
+    background-color: #f5f5f5;
+}
+
+.voxfor-ml-language-switcher .voxfor-ml-lang-option:last-child {
+    border-bottom: none;
+}
+
+/* Screen Reader Only Text */
+.voxfor-ml-sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Visual Editor Styles */
+.voxfor-ml-editing .voxfor-ml-editable {
+    position: relative;
+    outline: 2px dashed #0073aa;
+    outline-offset: 2px;
+    cursor: pointer;
+}
+
+.voxfor-ml-editing .voxfor-ml-editable:hover {
+    outline-color: #005a87;
+    background-color: rgba(0, 115, 170, 0.05);
+}
+
+.voxfor-ml-edit-tooltip {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    background: #333;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.voxfor-ml-editable:hover .voxfor-ml-edit-tooltip {
+    opacity: 1;
+}

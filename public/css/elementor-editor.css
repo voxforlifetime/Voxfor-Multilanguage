@@ -1,0 +1,134 @@
+/**
+ * Voxfor Multilanguage Elementor Editor Styles
+ */
+
+/* Translation panel styles */
+.voxfor-ml-elementor-panel {
+    background: #fff;
+    border: 1px solid #e1e1e4;
+    border-radius: 3px;
+    margin: 10px 0;
+    padding: 15px;
+}
+
+.voxfor-ml-elementor-panel h3 {
+    margin: 0 0 10px 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #495157;
+}
+
+/* Language selector in editor */
+.voxfor-ml-language-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.voxfor-ml-language-selector .language-option {
+    padding: 5px 10px;
+    background: #f1f3f4;
+    border: 1px solid #d5dadf;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 11px;
+    transition: all 0.2s ease;
+}
+
+.voxfor-ml-language-selector .language-option:hover {
+    background: #e1e1e4;
+}
+
+.voxfor-ml-language-selector .language-option.active {
+    background: #93003c;
+    color: #fff;
+    border-color: #93003c;
+}
+
+/* Translation status indicators */
+.voxfor-ml-translation-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    margin-left: 10px;
+}
+
+.voxfor-ml-translation-status .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.voxfor-ml-translation-status .status-dot.translated {
+    background: #46b450;
+}
+
+.voxfor-ml-translation-status .status-dot.untranslated {
+    background: #dc3232;
+}
+
+.voxfor-ml-translation-status .status-dot.partial {
+    background: #f56e28;
+}
+
+/* Translation buttons */
+.voxfor-ml-translate-btn {
+    background: #0085ba;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.voxfor-ml-translate-btn:hover {
+    background: #006a8e;
+}
+
+.voxfor-ml-translate-btn:disabled {
+    background: #a7aaad;
+    cursor: not-allowed;
+}
+
+.voxfor-ml-translate-btn.translating {
+    background: #f56e28;
+}
+
+/* Widget overlay for translations */
+.voxfor-ml-widget-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px;
+    border-radius: 0 0 0 3px;
+    font-size: 10px;
+    z-index: 10;
+}
+
+/* Integration with Elementor's existing styles */
+.elementor-panel .voxfor-ml-elementor-panel {
+    margin: 0 -20px 15px -20px;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+}
+
+/* Mobile responsiveness for editor */
+@media (max-width: 768px) {
+    .voxfor-ml-language-selector {
+        justify-content: center;
+    }
+    
+    .voxfor-ml-language-selector .language-option {
+        flex: 1;
+        text-align: center;
+        min-width: 60px;
+    }
+}

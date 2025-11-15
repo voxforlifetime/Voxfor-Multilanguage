@@ -1,0 +1,254 @@
+.voxfor-ml-exclusions-container {
+	display: grid;
+	gap: 20px;
+	margin-top: 20px;
+}
+
+/* Loading states */
+.voxfor-ml-loading {
+	text-align: center;
+	padding: 20px;
+	color: #666;
+}
+
+.voxfor-ml-loading::after {
+	content: '';
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border: 2px solid #ddd;
+	border-top: 2px solid #0073aa;
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+	margin-left: 8px;
+	vertical-align: middle;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+/* Success/Error message styles */
+.voxfor-ml-message {
+	position: fixed;
+	top: 32px;
+	right: 20px;
+	padding: 12px 20px;
+	border-radius: 4px;
+	font-weight: 500;
+	z-index: 10000;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+	animation: slideIn 0.3s ease;
+}
+
+.voxfor-ml-message.success {
+	background: #d4edda;
+	color: #155724;
+	border: 1px solid #c3e6cb;
+}
+
+.voxfor-ml-message.error {
+	background: #f8d7da;
+	color: #721c24;
+	border: 1px solid #f5c6cb;
+}
+
+@keyframes slideIn {
+	from { transform: translateX(100%); opacity: 0; }
+	to { transform: translateX(0); opacity: 1; }
+}
+
+.voxfor-ml-exclusions-list,
+.voxfor-ml-exclusion-form,
+.voxfor-ml-common-exclusions {
+	background: #fff;
+	border: 1px solid #ccd0d4;
+	padding: 20px;
+	box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.voxfor-ml-rule-type-section {
+	margin-bottom: 30px;
+}
+
+.voxfor-ml-rule-type-section h3 {
+	margin-bottom: 15px;
+	color: #23282d;
+}
+
+.voxfor-ml-rules-list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.voxfor-ml-rule-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 12px;
+	background: #f9f9f9;
+	border: 1px solid #e5e5e5;
+	border-radius: 4px;
+	transition: all 0.3s ease;
+}
+
+.voxfor-ml-rule-item:hover {
+	background: #f0f0f1;
+	border-color: #c3c4c7;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.voxfor-ml-rule-item.inactive {
+	opacity: 0.6;
+}
+
+.voxfor-ml-rule-content {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.voxfor-ml-rule-type {
+	display: inline-block;
+	padding: 2px 6px;
+	background: #0073aa;
+	color: #fff;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.voxfor-ml-rule-value {
+	background: #fff;
+	padding: 4px 8px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	font-size: 13px;
+}
+
+.voxfor-ml-rule-description {
+	color: #666;
+	font-style: italic;
+	font-size: 13px;
+}
+
+.voxfor-ml-rule-actions {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+/* Toggle Switch */
+.voxfor-ml-toggle-switch {
+	position: relative;
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+}
+
+.voxfor-ml-toggle-switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.voxfor-ml-toggle-slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	transition: .4s;
+	border-radius: 20px;
+}
+
+.voxfor-ml-toggle-slider:before {
+	position: absolute;
+	content: "";
+	height: 14px;
+	width: 14px;
+	left: 3px;
+	bottom: 3px;
+	background-color: white;
+	transition: .4s;
+	border-radius: 50%;
+}
+
+input:checked + .voxfor-ml-toggle-slider {
+	background-color: #0073aa;
+}
+
+input:checked + .voxfor-ml-toggle-slider:before {
+	transform: translateX(20px);
+}
+
+/* Quick Rules */
+.voxfor-ml-quick-rules {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+.voxfor-ml-quick-add {
+	position: relative;
+}
+
+.voxfor-ml-quick-add:hover::after {
+	content: attr(data-description);
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #333;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 4px;
+	font-size: 12px;
+	white-space: nowrap;
+	margin-bottom: 5px;
+	z-index: 1000;
+}
+
+/* Rule Type Help */
+.voxfor-ml-rule-type-help {
+	margin-top: 5px;
+}
+
+/* Form enhancements */
+.voxfor-ml-exclusion-form input:focus,
+.voxfor-ml-exclusion-form select:focus {
+	border-color: #0073aa;
+	box-shadow: 0 0 0 1px #0073aa;
+	outline: none;
+}
+
+.voxfor-ml-exclusion-form .required {
+	border-left: 3px solid #dc3232;
+}
+
+.voxfor-ml-exclusion-form .required:focus {
+	border-left-color: #0073aa;
+}
+
+/* Button states */
+.button:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+/* Enhanced rule item states */
+.voxfor-ml-rule-item.inactive {
+	opacity: 0.6;
+	background: #f6f7f7;
+}
+
+.voxfor-ml-rule-item.inactive:hover {
+	background: #f0f0f1;
+} 

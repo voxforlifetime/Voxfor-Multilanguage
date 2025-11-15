@@ -1,0 +1,112 @@
+.voxfor-ml-stats-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 20px;
+	margin: 20px 0;
+}
+
+.voxfor-ml-stat-box {
+	background: #fff;
+	border: 1px solid #ccd0d4;
+	padding: 20px;
+	text-align: center;
+	border-radius: 4px;
+}
+
+.voxfor-ml-stat-box h3 {
+	margin: 0 0 10px;
+	font-size: 14px;
+	color: #666;
+}
+
+.voxfor-ml-stat-number {
+	font-size: 32px;
+	font-weight: 600;
+	color: #0073aa;
+}
+
+.voxfor-ml-dashboard-section {
+	background: #fff;
+	border: 1px solid #ccd0d4;
+	padding: 20px;
+	margin: 20px 0;
+	border-radius: 4px;
+}
+
+.voxfor-ml-dashboard-section h2 {
+	margin-top: 0;
+}
+
+.voxfor-ml-progress-bar {
+	position: relative;
+	background: #a8a8a8;
+	height: 20px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.voxfor-ml-progress-fill {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	background: linear-gradient(95.45deg, #0082F8 .64%, #598fd2 98.23%);
+	transition: width 0.3s ease;
+}
+
+.voxfor-ml-progress-bar span {
+	position: relative;
+	display: block;
+	text-align: center;
+	line-height: 20px;
+	font-size: 12px;
+	font-weight: 600;
+	color: #fff;
+}
+
+.voxfor-ml-queue-stats {
+	display: flex;
+	gap: 30px;
+}
+
+.voxfor-ml-queue-item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.voxfor-ml-queue-label {
+	font-weight: 600;
+}
+
+.voxfor-ml-queue-count {
+	font-size: 18px;
+	color: #0073aa;
+}
+
+.voxfor-ml-quick-actions {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.voxfor-ml-feature-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.voxfor-ml-feature-list li {
+	padding: 8px 0;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.voxfor-ml-feature-list .enabled {
+	color: #46b450;
+}
+
+.voxfor-ml-feature-list .disabled {
+	color: #dc3232;
+} 

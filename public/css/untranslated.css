@@ -1,0 +1,275 @@
+/**
+ * Voxfor Multilanguage - Untranslated Page Styles
+ */
+
+/* Translation Notice */
+.voxfor-ml-translation-notice {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    max-width: 400px;
+    z-index: 99999;
+    transform: translateX(420px);
+    transition: transform 0.3s ease;
+}
+
+.voxfor-ml-translation-notice.visible {
+    transform: translateX(0);
+}
+
+.voxfor-ml-notice-content {
+    display: flex;
+    padding: 20px;
+    gap: 15px;
+}
+
+.voxfor-ml-notice-icon {
+    flex-shrink: 0;
+}
+
+.voxfor-ml-notice-icon .dashicons {
+    font-size: 32px;
+    width: 32px;
+    height: 32px;
+    color: #0073aa;
+}
+
+.voxfor-ml-notice-text {
+    flex: 1;
+}
+
+.voxfor-ml-notice-text h4 {
+    margin: 0 0 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #23282d;
+}
+
+.voxfor-ml-notice-text p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.voxfor-ml-notice-actions {
+    flex-shrink: 0;
+}
+
+.voxfor-ml-dismiss-notice {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.2s ease;
+}
+
+.voxfor-ml-dismiss-notice:hover {
+    color: #333;
+}
+
+.voxfor-ml-dismiss-notice .dashicons {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Progress Bar */
+.voxfor-ml-notice-progress {
+    margin-top: 10px;
+}
+
+.voxfor-ml-progress-bar {
+    background: #f0f0f0;
+    border-radius: 10px;
+    height: 8px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.voxfor-ml-progress-fill {
+    background: #0073aa;
+    height: 100%;
+    width: 0;
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+.voxfor-ml-progress-text {
+    font-size: 12px;
+    color: #999;
+}
+
+/* Translation Ready Notice */
+.voxfor-ml-translation-ready {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: #46b450;
+    color: #fff;
+    border-radius: 50px;
+    padding: 15px 25px;
+    box-shadow: 0 4px 20px rgba(70, 180, 80, 0.3);
+    z-index: 99999;
+    transition: transform 0.3s ease;
+}
+
+.voxfor-ml-translation-ready.visible {
+    transform: translateX(-50%) translateY(0);
+}
+
+.voxfor-ml-ready-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.voxfor-ml-ready-content .dashicons {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+}
+
+.voxfor-ml-ready-text {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.voxfor-ml-view-translation {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    margin-left: 10px;
+}
+
+.voxfor-ml-view-translation:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Admin Bar Adjustment */
+body.admin-bar .voxfor-ml-translation-notice {
+    top: 52px;
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    .voxfor-ml-translation-notice {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+    
+    body.admin-bar .voxfor-ml-translation-notice {
+        top: 56px;
+    }
+    
+    .voxfor-ml-notice-content {
+        padding: 15px;
+    }
+    
+    .voxfor-ml-notice-icon .dashicons {
+        font-size: 24px;
+        width: 24px;
+        height: 24px;
+    }
+    
+    .voxfor-ml-notice-text h4 {
+        font-size: 14px;
+    }
+    
+    .voxfor-ml-notice-text p {
+        font-size: 13px;
+    }
+    
+    .voxfor-ml-translation-ready {
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        transform: translateY(100px);
+        border-radius: 8px;
+    }
+    
+    .voxfor-ml-translation-ready.visible {
+        transform: translateY(0);
+    }
+    
+    .voxfor-ml-ready-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .voxfor-ml-view-translation {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .voxfor-ml-translation-notice {
+        background: #1e1e1e;
+        color: #fff;
+    }
+    
+    .voxfor-ml-notice-text h4 {
+        color: #fff;
+    }
+    
+    .voxfor-ml-notice-text p {
+        color: #aaa;
+    }
+    
+    .voxfor-ml-progress-bar {
+        background: #333;
+    }
+    
+    .voxfor-ml-dismiss-notice {
+        color: #666;
+    }
+    
+    .voxfor-ml-dismiss-notice:hover {
+        color: #fff;
+    }
+}
+
+/* Loading State */
+.voxfor-ml-loading {
+    position: relative;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.voxfor-ml-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #0073aa;
+    border-radius: 50%;
+    animation: voxfor-ml-spin 1s linear infinite;
+}
+
+@keyframes voxfor-ml-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

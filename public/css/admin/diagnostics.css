@@ -1,0 +1,128 @@
+.voxfor-ml-diagnostics-overview {
+	margin: 20px 0;
+}
+
+.voxfor-ml-status-cards {
+	display: flex;
+	gap: 20px;
+	margin-bottom: 30px;
+}
+
+.status-card {
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 20px;
+	flex: 1;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.status-card.success {
+	border-left: 4px solid #46b450;
+}
+
+.status-card.warning {
+	border-left: 4px solid #ffb900;
+}
+
+.status-card.error {
+	border-left: 4px solid #dc3232;
+}
+
+.status-icon {
+	font-size: 24px;
+}
+
+.status-card.success .status-icon {
+	color: #46b450;
+}
+
+.status-card.warning .status-icon {
+	color: #ffb900;
+}
+
+.status-card.error .status-icon {
+	color: #dc3232;
+}
+
+.status-content h3 {
+	margin: 0 0 5px 0;
+	font-size: 16px;
+}
+
+.status-content p {
+	margin: 0;
+	color: #666;
+}
+
+.voxfor-ml-diagnostic-section {
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 20px;
+	margin: 20px 0;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.voxfor-ml-diagnostic-section h2 {
+	margin-top: 0;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #eee;
+}
+
+.status-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	padding: 4px 8px;
+	border-radius: 4px;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.status-badge.status-pass {
+	background: #d4edda;
+	color: #155724;
+}
+
+.status-badge.status-warning {
+	background: #fff3cd;
+	color: #856404;
+}
+
+.status-badge.status-fail {
+	background: #f8d7da;
+	color: #721c24;
+}
+
+.voxfor-ml-fix-issue,
+.voxfor-ml-apply-recommendation {
+	font-size: 11px;
+	padding: 2px 8px;
+	height: auto;
+	line-height: 1.4;
+}
+
+.voxfor-ml-recommendations {
+	margin-top: 15px;
+}
+
+.voxfor-ml-recommendations .notice {
+	margin: 10px 0;
+}
+
+/* Table styling improvements */
+.wp-list-table th,
+.wp-list-table td {
+	vertical-align: middle;
+}
+
+.wp-list-table code {
+	background: #f1f1f1;
+	padding: 2px 4px;
+	border-radius: 3px;
+	font-size: 11px;
+}

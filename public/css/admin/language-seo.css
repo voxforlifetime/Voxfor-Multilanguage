@@ -1,0 +1,86 @@
+.voxfor-ml-language-seo-container {
+	max-width: 800px;
+}
+
+.voxfor-ml-language-selector {
+	background: #fff;
+	border: 1px solid #ccd0d4;
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.voxfor-ml-language-selector label {
+	font-weight: 600;
+	margin-right: 10px;
+}
+
+.voxfor-ml-language-selector select {
+	min-width: 200px;
+}
+
+.voxfor-ml-seo-section {
+	background: #fff;
+	border: 1px solid #ccd0d4;
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.voxfor-ml-seo-section h2 {
+	margin-top: 0;
+}
+
+.voxfor-ml-seo-preview {
+	background: #f9f9f9;
+	border: 1px solid #ddd;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+.voxfor-ml-preview-box {
+	background: #fff;
+	border: 1px solid #e0e0e0;
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 4px;
+}
+
+.voxfor-ml-preview-box h4 {
+	margin-top: 0;
+}
+
+.voxfor-ml-serp-preview {
+	font-family: Arial, sans-serif;
+}
+
+.serp-title {
+	color: #1a0dab;
+	font-size: 18px;
+	line-height: 1.2;
+	margin-bottom: 3px;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.serp-url {
+	color: #006621;
+	font-size: 14px;
+	line-height: 1.3;
+}
+
+.serp-description {
+	color: #545454;
+	font-size: 13px;
+	line-height: 1.4;
+	margin-top: 3px;
+}
+
+.voxfor-ml-code-preview {
+	background: #f4f4f4;
+	border: 1px solid #ddd;
+	padding: 15px;
+	overflow-x: auto;
+	font-size: 13px;
+	line-height: 1.4;
+} 

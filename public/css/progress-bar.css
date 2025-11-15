@@ -1,0 +1,337 @@
+/**
+ * Voxfor ML Progress Bar Styles
+ */
+
+/* Modal Overlay */
+.voxfor-ml-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999999;
+    display: none;
+}
+
+/* Modal Container */
+.voxfor-ml-modal-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 700px;
+    max-height: 80vh;
+    overflow: hidden;
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Shake animation for modal */
+.voxfor-ml-modal-container.shake {
+    animation: shake 0.6s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translate(-50%, -50%); }
+    10%, 30%, 50%, 70%, 90% { transform: translate(-48%, -50%); }
+    20%, 40%, 60%, 80% { transform: translate(-52%, -50%); }
+}
+
+/* Modal Header */
+.voxfor-ml-modal-header {
+    background: #0073aa;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.voxfor-ml-modal-header h2 {
+    margin: 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.voxfor-ml-modal-close {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+.voxfor-ml-modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Modal Body */
+.voxfor-ml-modal-body {
+    padding: 20px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+/* Progress Section */
+.voxfor-ml-progress-section {
+    margin-bottom: 20px;
+}
+
+.voxfor-ml-progress-bar-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.voxfor-ml-progress-bar {
+    width: 100%;
+    height: 25px;
+    background: #f1f1f1;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ddd;
+}
+
+.voxfor-ml-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0073aa, #005a87);
+    border-radius: 12px;
+    transition: width 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.voxfor-ml-progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    animation: progressShimmer 2s infinite;
+}
+
+@keyframes progressShimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.voxfor-ml-progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Current Status */
+.voxfor-ml-current-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    border-left: 4px solid #0073aa;
+}
+
+.voxfor-ml-current-status .status-text {
+    font-weight: 500;
+}
+
+/* Stats Section */
+.voxfor-ml-stats-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+.voxfor-ml-stat-item {
+    text-align: center;
+}
+
+.voxfor-ml-stat-item .stat-label {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.voxfor-ml-stat-item .stat-value {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.voxfor-ml-stat-item .stat-value.success {
+    color: #46b450;
+}
+
+.voxfor-ml-stat-item .stat-value.error {
+    color: #dc3232;
+}
+
+/* Log Section */
+.voxfor-ml-log-section {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.voxfor-ml-log-section h3 {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+}
+
+.voxfor-ml-log-container {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+}
+
+.log-entry {
+    display: flex;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.log-time {
+    color: #666;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.log-message {
+    flex: 1;
+}
+
+.log-entry.log-error .log-message {
+    color: #dc3232;
+}
+
+.log-entry.log-success .log-message {
+    color: #46b450;
+}
+
+.log-entry.log-info .log-message {
+    color: #333;
+}
+
+/* Custom scrollbar for log */
+.voxfor-ml-log-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.voxfor-ml-log-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.voxfor-ml-log-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.voxfor-ml-log-container::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Modal Footer */
+.voxfor-ml-modal-footer {
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-top: 1px solid #ddd;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+/* Spin animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .voxfor-ml-modal-container {
+        width: 95%;
+        margin: 10px;
+        max-height: 90vh;
+    }
+    
+    .voxfor-ml-stats-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .voxfor-ml-modal-footer {
+        flex-direction: column;
+    }
+    
+    .voxfor-ml-modal-footer .button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Button improvements */
+.voxfor-ml-modal-footer .button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Loading states */
+.voxfor-ml-current-status .dashicons.spin {
+    color: #0073aa;
+}
+
+/* Success state */
+.voxfor-ml-current-status .dashicons-yes-alt {
+    color: #46b450;
+}

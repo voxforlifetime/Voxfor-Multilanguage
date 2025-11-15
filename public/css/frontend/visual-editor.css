@@ -1,0 +1,305 @@
+/* Visual Editor Toolbar */
+.voxfor-ml-visual-toolbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #23282d;
+	color: #fff;
+	z-index: 99999;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+body.admin-bar .voxfor-ml-visual-toolbar {
+	top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+	body.admin-bar .voxfor-ml-visual-toolbar {
+		top: 46px;
+	}
+}
+
+.voxfor-ml-toolbar-inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 20px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.voxfor-ml-toolbar-brand {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-weight: 600;
+}
+
+.voxfor-ml-toolbar-brand .dashicons {
+	font-size: 20px;
+	width: 20px;
+	height: 20px;
+}
+
+.voxfor-ml-toolbar-info {
+	flex: 1;
+	text-align: center;
+}
+
+.voxfor-ml-current-language {
+	background: rgba(255,255,255,0.1);
+	padding: 4px 12px;
+	border-radius: 4px;
+	font-size: 13px;
+}
+
+.voxfor-ml-toolbar-actions {
+	display: flex;
+	gap: 10px;
+}
+
+.voxfor-ml-toolbar-button {
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.3);
+	color: #fff;
+	padding: 6px 12px;
+	border-radius: 4px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	transition: all 0.2s ease;
+	text-decoration: none;
+}
+
+.voxfor-ml-toolbar-button:hover {
+	background: rgba(255,255,255,0.1);
+	border-color: rgba(255,255,255,0.5);
+}
+
+.voxfor-ml-toolbar-button .dashicons {
+	font-size: 16px;
+	width: 16px;
+	height: 16px;
+}
+
+/* Edit Panel Styles */
+.voxfor-ml-edit-panel {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+	width: 90%;
+	max-width: 600px;
+	max-height: 80vh;
+	display: none;
+	z-index: 100000;
+}
+
+.voxfor-ml-edit-panel.active {
+	display: block;
+}
+
+.voxfor-ml-edit-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+	border-bottom: 1px solid #eee;
+}
+
+.voxfor-ml-edit-header h3 {
+	margin: 0;
+	font-size: 18px;
+}
+
+.voxfor-ml-edit-close {
+	background: none;
+	border: none;
+	font-size: 24px;
+	cursor: pointer;
+	color: #666;
+	padding: 0;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.voxfor-ml-edit-close:hover {
+	color: #000;
+}
+
+.voxfor-ml-edit-content {
+	padding: 20px;
+	max-height: calc(80vh - 140px);
+	overflow-y: auto;
+}
+
+.voxfor-ml-edit-original,
+.voxfor-ml-edit-translation {
+	margin-bottom: 20px;
+}
+
+.voxfor-ml-edit-content label {
+	display: block;
+	font-weight: 600;
+	margin-bottom: 8px;
+	color: #333;
+}
+
+.voxfor-ml-original-text {
+	background: #f5f5f5;
+	padding: 12px;
+	border-radius: 4px;
+	border: 1px solid #ddd;
+	color: #666;
+	line-height: 1.5;
+}
+
+.voxfor-ml-translation-input {
+	width: 100%;
+	min-height: 100px;
+	padding: 12px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	font-size: 14px;
+	line-height: 1.5;
+	resize: vertical;
+}
+
+.voxfor-ml-translation-input:focus {
+	outline: none;
+	border-color: #0073aa;
+	box-shadow: 0 0 0 1px #0073aa;
+}
+
+.voxfor-ml-edit-actions {
+	display: flex;
+	gap: 10px;
+	justify-content: flex-end;
+	padding-top: 20px;
+	border-top: 1px solid #eee;
+}
+
+.voxfor-ml-save-translation,
+.voxfor-ml-cancel-edit {
+	padding: 8px 16px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 14px;
+	transition: all 0.2s ease;
+}
+
+.voxfor-ml-save-translation {
+	background: #0073aa;
+	color: #fff;
+}
+
+.voxfor-ml-save-translation:hover {
+	background: #005a87;
+}
+
+.voxfor-ml-save-translation:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.voxfor-ml-cancel-edit {
+	background: #f0f0f0;
+	color: #333;
+}
+
+.voxfor-ml-cancel-edit:hover {
+	background: #e0e0e0;
+}
+
+/* Overlay */
+.voxfor-ml-edit-panel::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: -1;
+}
+
+/* Staged translations */
+.voxfor-ml-staged {
+	background: rgba(255, 193, 7, 0.2) !important;
+	border: 2px dashed #ffc107 !important;
+	position: relative;
+}
+
+.voxfor-ml-staged::after {
+	content: '●';
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	background: #ffc107;
+	color: white;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	font-size: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+}
+
+/* Save All button states */
+.voxfor-ml-save-all.success {
+	background: #28a745 !important;
+	border-color: #28a745 !important;
+}
+
+.voxfor-ml-save-all.error {
+	background: #dc3545 !important;
+	border-color: #dc3545 !important;
+}
+
+/* Hide highlights toggle */
+.voxfor-ml-hide-highlights .voxfor-ml-editable:not(.voxfor-ml-staged) {
+	outline: none !important;
+	border: none !important;
+	background: transparent !important;
+}
+
+/* Animation for updating button */
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+.spin {
+	animation: spin 1s linear infinite;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+	.voxfor-ml-edit-panel {
+		width: 95%;
+		max-height: 90vh;
+	}
+	
+	.voxfor-ml-toolbar-inner {
+		padding: 10px;
+	}
+	
+	.voxfor-ml-toolbar-brand span:not(.dashicons) {
+		display: none;
+	}
+	
+	.voxfor-ml-toolbar-info {
+		font-size: 12px;
+	}
+}
