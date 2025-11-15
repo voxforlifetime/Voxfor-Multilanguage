@@ -1,5 +1,14 @@
 # Voxfor Multilanguage
 
+Contributors: voxfor
+Tags: multilingual, translation, language, seo, deepl
+Requires at least: 6.5
+Tested up to: 6.8
+Requires PHP: 8.1
+Stable tag: 2.2.4
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+
 Professional multilingual WordPress plugin using the DeepL API. Transform your website into a global platform.
 
 [![WordPress Plugin](https://img.shields.io/badge/WordPress-Plugin-blue.svg)](https://wordpress.org/plugins/voxfor-advanced-price-management-for-woocommerce/)
@@ -15,7 +24,7 @@ Professional multilingual WordPress plugin using the DeepL API. Transform your w
 ## Resources
 
 - [Voxfor Multilanguage Overview](https://www.voxfor.com/multilinguage-translate.php)
-- [Plugin Documentation](hhttps://www.voxfor.com/multilinguage-translate.php#documentation)
+- [Plugin Documentation](https://www.voxfor.com/multilinguage-translate.php#documentation)
 - [Complete Setup Guide](https://www.youtube.com/watch?v=rfwD2khOhgg)
 
 ## Plugin Screenshots
@@ -27,7 +36,7 @@ Professional multilingual WordPress plugin using the DeepL API. Transform your w
 ![Translation Settings](https://ps.w.org/voxfor-multilanguage/assets/Screenshot-3.png?rev=3395802)
 
 **Translation Memory**
-![Translation Memory](https://ps.w.org/voxfor-secure-live-chat-and-ai-support/assets/Screenshot-4.png?rev=3359952)
+![Translation Memory](https://ps.w.org/voxfor-multilanguage/assets/Screenshot-4.png?rev=3395802)
 
 **Glossary Rules Settings**
 ![Glossary Rules](https://ps.w.org/voxfor-multilanguage/assets/Screenshot-5.png?rev=3395802)
