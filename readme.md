@@ -24,7 +24,7 @@ Professional multilingual WordPress plugin using the DeepL API. Transform your w
 ## Resources
 
 - [Voxfor Multilanguage Overview](https://www.voxfor.com/multilinguage-translate.php)
-- [Plugin Documentation](hhttps://www.voxfor.com/multilinguage-translate.php#documentation)
+- [Plugin Documentation](https://www.voxfor.com/multilinguage-translate.php#documentation)
 - [Complete Setup Guide](https://www.youtube.com/watch?v=rfwD2khOhgg)
 
 ## Plugin Screenshots
@@ -36,7 +36,7 @@ Professional multilingual WordPress plugin using the DeepL API. Transform your w
 ![Translation Settings](https://ps.w.org/voxfor-multilanguage/assets/Screenshot-3.png?rev=3395802)
 
 **Translation Memory**
-![Translation Memory](https://ps.w.org/voxfor-secure-live-chat-and-ai-support/assets/Screenshot-4.png?rev=3359952)
+![Translation Memory](https://ps.w.org/voxfor-multilanguage/assets/Screenshot-4.png?rev=3395802)
 
 **Glossary Rules Settings**
 ![Glossary Rules](https://ps.w.org/voxfor-multilanguage/assets/Screenshot-5.png?rev=3395802)
